@@ -32,4 +32,13 @@ public class TarefaController {
         return ResponseEntity.status(HttpStatus.ACCEPTED).build();
     }
 
+    @PutMapping("/atualizarTarefa/{id}")
+    public ResponseEntity<Tarefa> atualizarTarefa(@PathVariable int id, @RequestBody Tarefa tarefaDetails) {
+        try {
+            Tarefa tarefaAtualizada = tarefaService.atualizarTarefa(id, tarefaDetails);
+            return new ResponseEntity<>(tarefaAtualizada, HttpStatus.OK);
+        } catch (RuntimeException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 }

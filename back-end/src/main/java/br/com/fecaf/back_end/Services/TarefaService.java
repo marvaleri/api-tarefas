@@ -26,4 +26,16 @@ public class TarefaService {
         tarefaRepository.deleteById(id);
     }
 
+    //Atualizar
+    public Tarefa atualizarTarefa (int id, Tarefa tarefaDetails) {
+        Tarefa tarefa = tarefaRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Tarefa não encontrado"));
+
+        tarefa.setTitulo(tarefaDetails.getTitulo());
+        tarefa.setPrioridade(tarefaDetails.getPrioridade());
+        tarefa.setDataCriacao(tarefaDetails.getDataCriacao());
+        tarefa.setDataConclusao(tarefaDetails.getDataConclusao());
+
+        return tarefaRepository.save(tarefa);
+    }
 }
