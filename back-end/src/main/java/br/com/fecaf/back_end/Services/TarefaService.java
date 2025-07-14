@@ -20,4 +20,10 @@ public class TarefaService {
     public Tarefa salvarTarefa(Tarefa tarefa) {
         return tarefaRepository.save(tarefa);
     }
+
+    //Deletar
+    public void deletarTarefa (int id) {
+        tarefaRepository.deleteById(id);
+    }
+
 }
