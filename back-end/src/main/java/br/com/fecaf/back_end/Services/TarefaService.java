@@ -16,5 +16,8 @@ public class TarefaService {
     //Listar
     public List<Tarefa> listarTarefas() { return tarefaRepository.findAll(); }
 
-
+    //Criar
+    public Tarefa salvarTarefa(Tarefa tarefa) {
+        return tarefaRepository.save(tarefa);
+    }
 }
