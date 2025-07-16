@@ -29,7 +29,7 @@ public class TarefaService {
     //Atualizar
     public Tarefa atualizarTarefa (int id, Tarefa tarefaDetails) {
         Tarefa tarefa = tarefaRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Tarefa não encontrado"));
+                .orElseThrow(() -> new RuntimeException("Tarefa não encontrada"));
 
         tarefa.setTitulo(tarefaDetails.getTitulo());
         tarefa.setPrioridade(tarefaDetails.getPrioridade());

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gerenciador de Tarefas</h1>
+        </header>
+        <div class="form-container">
+            <h2>Cadastrar Tarefa</h2>
+            <input type="text" id="tituloInput" placeholder="Titulo">
+            <input type="text" id="prioridadeInput" placeholder="Prioridade">
+            <input type="text" id="descricaoInput" placeholder="Descricao">
+            <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+        </div>
+
+        <section id="cardContainer" class="cardContainer"></section>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

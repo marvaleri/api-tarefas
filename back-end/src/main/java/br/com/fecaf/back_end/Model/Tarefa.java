@@ -13,8 +13,8 @@ public class Tarefa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String titulo;
-    private String prioridade;
     private String descricao;
+    private String prioridade;
 
     public int getId() {
         return id;
