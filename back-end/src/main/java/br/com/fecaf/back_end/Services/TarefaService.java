@@ -33,8 +33,7 @@ public class TarefaService {
 
         tarefa.setTitulo(tarefaDetails.getTitulo());
         tarefa.setPrioridade(tarefaDetails.getPrioridade());
-        tarefa.setDataCriacao(tarefaDetails.getDataCriacao());
-        tarefa.setDataConclusao(tarefaDetails.getDataConclusao());
+        tarefa.setDescricao(tarefaDetails.getDescricao());
 
         return tarefaRepository.save(tarefa);
     }

@@ -1,5 +1,6 @@
 package br.com.fecaf.back_end.Model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
 import java.sql.Date;
@@ -13,8 +14,7 @@ public class Tarefa {
     private int id;
     private String titulo;
     private String prioridade;
-    private Date dataCriacao;
-    private Date dataConclusao;
+    private String descricao;
 
     public int getId() {
         return id;
@@ -22,14 +22,6 @@ public class Tarefa {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public Date getDataConclusao() {
-        return dataConclusao;
-    }
-
-    public void setDataConclusao(Date dataConclusao) {
-        this.dataConclusao = dataConclusao;
     }
 
     public String getTitulo() {
@@ -48,11 +40,7 @@ public class Tarefa {
         this.prioridade = prioridade;
     }
 
-    public Date getDataCriacao() {
-        return dataCriacao;
-    }
+    public String getDescricao() { return descricao; }
 
-    public void setDataCriacao(Date dataCriacao) {
-        this.dataCriacao = dataCriacao;
-    }
+    public void setDescricao(String descricao) { this.descricao = descricao; }
 }
