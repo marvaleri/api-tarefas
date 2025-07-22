@@ -16,6 +16,14 @@ public class Tarefa {
     private String descricao;
     private String prioridade;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getTitulo() {
         return titulo;
     }
